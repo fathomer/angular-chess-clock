@@ -1,1 +1,23 @@
-<p>chess-clock works!</p>
+<div class="chess-clock">
+<main>
+  <div class="player pt-2">
+    <div class="player-time left-player-time" (click)="player1Click()">
+      <span>{{player1Time | date:'mm:ss':'+0000'}}</span>
+      <!-- <span id="minLeft">10</span>:<span id="secLeft">00</span> -->
+    </div>
+    <div class="player-time right-player-time" (click)="player2Click()">
+      <span>{{player2Time | date:'mm:ss':'+0000'}}</span>
+    </div>
+  </div>
+
+  <div class="timer-buttons">
+    <button class="start-bttn bttn" type="button" (click)="pauseTimer()" >PAUSE</button>
+    <button class="reset-bttn bttn" type="button" (click)="resetBoth()">RESET</button>
+  </div>
+</main>
+<footer>
+  <p>
+    Press spacebar or click on timer after a move to switch player's clock.
+  </p>
+</footer>
+</div>
