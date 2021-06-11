@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   box-sizing: border-box;
 }
 
@@ -17,25 +17,22 @@
 
 main {
   width: 100%;
-  padding: 0 10px;
+  padding: 0 0;
   box-sizing: border-box;
 }
 
 .player {
   margin: 0 0 5px 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .player-time {
   font-size: 6rem;
   font-weight: bold;
-  width: 100%;
   height: 250px;
   display: flex;
-  margin: 0 auto;
+  margin: auto;
   color: #000000;
-  max-width: 450px;
+  /* max-width: 450px; */
   border-radius: 8px;
   align-items: center;
   justify-content: center;
@@ -87,7 +84,7 @@ footer p {
   text-align: center;
 }
 
-@media only screen and (orientation: portrait) and (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .player-time {
     font-size: 4rem;
   }
