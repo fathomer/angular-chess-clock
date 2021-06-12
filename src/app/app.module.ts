@@ -10,13 +10,18 @@ import { MatToolbarModule} from  '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoaderComponent } from './loader/loader.component';
 import { ChessClockComponent } from './chess-clock/chess-clock.component';
 import { HomeComponent } from './home/home.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ClockSettingsComponent } from './chess-clock/settings/clock-settings/clock-settings.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     NavbarComponent,
     LoaderComponent,
     ChessClockComponent,
-    HomeComponent
+    HomeComponent,
+    ClockSettingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +42,13 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatDialogModule,
+    MatInputModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

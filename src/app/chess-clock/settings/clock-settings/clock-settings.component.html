@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Settings</h1>
+<div mat-dialog-content>
+  <div>
+    <span class="pr-5 mr-5">Start time for both players : </span>
+    <mat-form-field color="accent">
+      <mat-label>In seconds</mat-label>
+      <input
+        matInput
+        placeholder="Start time"
+        value="600"
+        [(ngModel)]="dialogData.startTime"
+      />
+    </mat-form-field>
+  </div>
+  <div>
+    <span class="pr-5 mr-5">Increment after each move : </span>
+    <mat-form-field color="accent">
+      <mat-label>In seconds</mat-label>
+      <input
+        matInput
+        placeholder="Start time"
+        value="5"
+        [(ngModel)]="dialogData.increment"
+      />
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button cdkFocusInitial (click)="onSave()">Save</button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</div>
