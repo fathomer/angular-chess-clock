@@ -7,7 +7,8 @@
 .chess-clock {
   width: 100%;
   height: calc(100% - 44px);
-  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("src/assets/chess-bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("src/assets/chess-bg.jpg");
   background-size: cover;
   background-color: #14a7ff;
 }
@@ -96,8 +97,21 @@ footer p {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .player-time{
+.mobile {
+  display: block;
+}
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .player-time {
     height: 400px;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
   }
 }
